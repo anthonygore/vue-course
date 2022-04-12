@@ -17,6 +17,12 @@ const { title, description, lessons } = course
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
     </header>
+    <router-link
+      class="button primary icon"
+      :to="`/courses/${courseId}/lessons/${course.lessons[0].id}`"
+    >
+      Start course
+    </router-link>
     <div>
       <LessonSummary
         v-for="(lesson, index) in lessons"
